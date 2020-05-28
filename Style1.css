@@ -1,8 +1,10 @@
 
 canvas{
     border-style: solid;
-    width: 700;
-    height: 400;
+    width: auto;
+    height: auto;
+    max-height: 50%;
+    max-width: 70%;
     background-color: snow;
 }
 

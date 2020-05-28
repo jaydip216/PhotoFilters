@@ -12,24 +12,24 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
         <style>html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}</style>
     </head>
-    <body>
+    <body style="background-color: azure">
         
         <div class="jumbotron text-center">
         <h1 style="text-decoration-style: double">PhotoFilters</h1>
         </div>   
-        <div class="row">
-            <div class="col" style="background-color: azure"><canvas id="can"></canvas>
+        <div class="col">
+            <div class="" style="background-color: azure"><canvas id="can"></canvas>
             <br><br>
             <input type="file" accept="image/*" multiple="false" id="fimg" onchange="uploadimage()">
             </div>
-            
-            <div class="col" style="background-color: azure"><br>
-            <div class="row"><button type="button" class="btn btn-outline-primary" value="Gray"  onclick="makeGray()">Gray</button></div><br>
-            <div class="row"><button type="button" class="btn btn-outline-primary" value="Red" onclick="makeRed()">Red</button></div><br>
-            <div class="row"><button type="button" class="btn btn-outline-primary" value="Green" onclick="makeGreen()">Green</button></div><br>
-            <div class="row"><button type="button" class="btn btn-outline-primary" value="Blue" onclick="makeBlue()">Blue</button></div><br>
-            <div class="row"><button type="button" class="btn btn-outline-primary" value="Rainbow" onclick="filterRainbow()">Rainbow</button></div><br>
-            <div class="row"><button type="button" class="btn btn-outline-primary" value="Original" onclick="original()">Original</button></div>
+            <br>
+            <div class="row" style="background-color: azure">
+            <button type="button" class="btn btn-outline-primary" value="Gray"  onclick="makeGray()">Gray</button>&ensp;
+            <button type="button" class="btn btn-outline-primary" value="Red" onclick="makeRed()">Red</button>&ensp;
+            <button type="button" class="btn btn-outline-primary" value="Green" onclick="makeGreen()">Green</button>&ensp;
+            <button type="button" class="btn btn-outline-primary" value="Blue" onclick="makeBlue()">Blue</button>&ensp;
+            <button type="button" class="btn btn-outline-primary" value="Rainbow" onclick="filterRainbow()">Rainbow</button>&ensp;
+            <button type="button" class="btn btn-outline-primary" value="Original" onclick="original()">Original</button>
             </div>
             
     </div>
