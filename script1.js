@@ -2,13 +2,16 @@ var img=null;
 var imgcnv;
 function uploadimage() {
     imgcnv=document.getElementById("can");
+    
     var finput=document.getElementById("fimg");
     img=new SimpleImage(finput);
     img.drawTo(imgcnv);
 }
 function makeGray() {
+    document.getElementById("gray-button").innerHTML="Loading...";
     if(img==null){
         alert('Upload image!');
+        return;
     }
     var grayimg=new SimpleImage(img);
     for(var pixel of grayimg.values())
@@ -19,42 +22,57 @@ function makeGray() {
         pixel.setBlue(avg);
     }
     grayimg.drawTo(imgcnv);
+    document.getElementById("gray-button").innerHTML="Gray";
 }
 function makeRed() {
     if(img==null){
         alert('Upload image!');
+        return;
     }
+    document.getElementById("red-button").innerHTML="Loading...";
     var redimg=new SimpleImage(img);
     for(var pixel of redimg.values())
     {
         pixel.setRed(255);
     }
     redimg.drawTo(imgcnv);
+    document.getElementById("red-button").innerHTML="Red";
 }
 function makeGreen() {
     if(img==null){
         alert('Upload image!');
+        return;
     }
+    document.getElementById("green-button").innerHTML="Loading...";
     var greenimg=new SimpleImage(img);
     for(var pixel of greenimg.values())
     {
         pixel.setGreen(255);
     }
     greenimg.drawTo(imgcnv);
+    document.getElementById("green-button").innerHTML="Green";
 }
 function makeBlue() {
     if(img==null){
         alert('Upload image!');
+        return;
     }
+    document.getElementById("blue-button").innerHTML="Loading...";
     var blueimg=new SimpleImage(img);
     for(var pixel of blueimg.values())
     {
         pixel.setBlue(255);
     }
     blueimg.drawTo(imgcnv);
+    document.getElementById("blue-button").innerHTML="Blue";
 }
 function filterRainbow() {
-  var rimg=new SimpleImage(img);
+  if(img==null){
+        alert('Upload image!');
+        return;
+    }
+    document.getElementById("rainbow-button").innerHTML="Loading...";
+    var rimg=new SimpleImage(img);
     var height = rimg.getHeight();
   for (var pixel of rimg.values()) {
     var y = pixel.getY();
@@ -139,7 +157,14 @@ function filterRainbow() {
     }
   }
     rimg.drawTo(imgcnv);
+    document.getElementById("rainbow-button").innerHTML="Rainbow";
 }
 function original() {
+    if(img==null){
+        alert('Upload image!');
+        return;
+    }
+    document.getElementById("original-button").innerHTML="Loading...";
     img.drawTo(imgcnv);
+    document.getElementById("original-button").innerHTML="Original";
 }
